@@ -9,3 +9,8 @@ program runs. The Car Object in the heap until GC comes and take them?
 2.Vad är Value Types respektive Reference Types och vad skiljer dem åt?
 
 Values types lives where they are declared and reference types lives only in heap. 
+
+3.Följande metoder (se bild nedan) genererar olikasvar. Den första returnerar 3, denandra returnerar 4, varför?
+
+In ReturnValue() method we use only stack. 
+In ReturnValue2() method we use stack and heap. My Int is a class.  

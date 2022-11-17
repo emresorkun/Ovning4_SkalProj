@@ -63,6 +63,26 @@ namespace SkalProj_Datastrukturer_Minne
         /// </summary>
         static void ExamineList()
         {
+            bool loopT=false;
+            while (loopT==false)
+            {
+                
+                string userInput;
+                userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "+":
+                        Console.WriteLine("plus");
+                        break;
+                    case "-":
+                        Console.WriteLine("minus");
+                        break;
+                    default:
+                        break;
+                          
+                }
+                loopT=true;
+            }
             /*
              * Loop this method untill the user inputs something to exit to main menue.
              // DO WHILE?
