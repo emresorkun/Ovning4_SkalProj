@@ -64,10 +64,11 @@ namespace SkalProj_Datastrukturer_Minne
         /// </summary>
         static void ExamineList()
         {
+            List<string> theList = new List<string>();
             bool loopT=false;
             while (loopT==false)
             {
-                List<string> theList = new List<string>();
+                
                 Console.WriteLine("please enter a word with a + or - in the begining");
                 string input= Console.ReadLine();
                 char nav = input[0];
@@ -77,12 +78,26 @@ namespace SkalProj_Datastrukturer_Minne
                 {
                     case '+':
                         theList.Add(value);
-                        Console.WriteLine($"Adding {value} to the list. The list has {theList.Count} members");
+                        Console.WriteLine($"Adding {value} to the list. The list has {theList.Count} members and the capacity of the list is {theList.Capacity}");
                         
                         
                         break;
                     case '-':
                         Console.WriteLine("minus");
+                        if(theList.Count > 0)
+                        {
+                            if (theList.Contains(value))
+                            {
+                                theList.Remove(value);
+                                Console.WriteLine($"Deleting {value} from the list. The list has {theList.Count} members and the capacity of the list is {theList.Capacity}");
+
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("the list is empty, directing to the main menu");
+                            loopT=true;
+                        }
                         break;
                     default:
                         Console.WriteLine("enter - or +");
@@ -113,7 +128,7 @@ namespace SkalProj_Datastrukturer_Minne
              // ADD.LIST??
              * '-': Remove the rest of the input from the list (The user could write -Adam and "Adam" would be removed from the list)
              * In both cases, look at the count and capacity of the list
-             //LIST.lenght?
+             
              * As a default case, tell them to use only + or -
              //easy
              * Below you can see some inspirational code to begin working.
