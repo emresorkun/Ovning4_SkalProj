@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace SkalProj_Datastrukturer_Minne
 {
@@ -66,26 +67,47 @@ namespace SkalProj_Datastrukturer_Minne
             bool loopT=false;
             while (loopT==false)
             {
-                
-                string userInput;
-                userInput = Console.ReadLine();
-                switch (userInput)
+                List<string> theList = new List<string>();
+                Console.WriteLine("please enter a word with a + or - in the begining");
+                string input= Console.ReadLine();
+                char nav = input[0];
+                string value = input.Substring(1);
+                Console.WriteLine(value);
+                switch (nav)
                 {
-                    case "+":
-                        Console.WriteLine("plus");
+                    case '+':
+                        theList.Add(value);
+                        Console.WriteLine($"Adding {value} to the list. The list has {theList.Count} members");
+                        
+                        
                         break;
-                    case "-":
+                    case '-':
                         Console.WriteLine("minus");
                         break;
                     default:
+                        Console.WriteLine("enter - or +");
                         break;
                           
                 }
-                loopT=true;
+                Console.WriteLine("enter any value to continue adding-subtrackting. Wish to exit? please type xX");
+
+                string exitCode = Console.ReadLine();
+                if (exitCode == "xX")
+                {
+                    Console.WriteLine("You are being directed to the main menu");
+                    loopT = true;
+                
+                }
+                else
+                {
+
+                    loopT = false;
+                    
+                        };
             }
             /*
              * Loop this method untill the user inputs something to exit to main menue.
-             // DO WHILE?
+             // DO WHILE? DONE
              * Create a switch statement with cases '+' and '-'
              * '+': Add the rest of the input to the list (The user could write +Adam and "Adam" would be added to the list)
              // ADD.LIST??
