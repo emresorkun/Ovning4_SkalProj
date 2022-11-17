@@ -65,11 +65,15 @@ namespace SkalProj_Datastrukturer_Minne
         {
             /*
              * Loop this method untill the user inputs something to exit to main menue.
+             // DO WHILE?
              * Create a switch statement with cases '+' and '-'
              * '+': Add the rest of the input to the list (The user could write +Adam and "Adam" would be added to the list)
+             // ADD.LIST??
              * '-': Remove the rest of the input from the list (The user could write -Adam and "Adam" would be removed from the list)
              * In both cases, look at the count and capacity of the list
+             //LIST.lenght?
              * As a default case, tell them to use only + or -
+             //easy
              * Below you can see some inspirational code to begin working.
             */
 

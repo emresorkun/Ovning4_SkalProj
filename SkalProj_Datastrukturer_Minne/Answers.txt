@@ -1,1 +1,11 @@
-﻿
+﻿Answers will be written here 
+1.Hur fungerar stacken och heapen? Förklaragärna med exempel eller skiss på dess grundläggande funktion
+
+Value types lives where they are declared and reference types lives only in heap. Pointers ( value types) live in both. 
+Reference types are. Lets say we created a var method with two variables  live in value type and this method creates an object, Car object. Car 
+Object lives in heap. when we run the programm, the Car Object is created in heap lives there happily. Data in the stack is cleaned when
+program runs. The Car Object in the heap until GC comes and take them? 
+
+2.Vad är Value Types respektive Reference Types och vad skiljer dem åt?
+
+Values types lives where they are declared and reference types lives only in heap. 
