@@ -163,15 +163,42 @@ namespace SkalProj_Datastrukturer_Minne
                 queue.Enqueue("Stina");
                 queue.Dequeue();
             }
-            static void Print(Queue queue)
+
+            Console.WriteLine("to add someone to the que 1 to delete 2");
+            string input = Console.ReadLine();
+            switch (input)
             {
-                foreach (string item in queue)
-                {
-                    Console.WriteLine(item);
-                }
+                case "1":
+                    Console.WriteLine("Who is next?Enter name");
+                    string newLiner= Console.ReadLine();
+                    queue.Enqueue(newLiner);
+                    foreach (string item in queue)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case "2":
+                    Console.WriteLine("Who is next?Enter name");
+                    string outLiner = Console.ReadLine();
+                    queue.Dequeue();
+                    foreach (string item in queue)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+
             }
             
-            
+
+
+
+            //static void Print(Queue queue)
+            //{
+
+            //}
+
+
+
 
             /*
              * Loop this method untill the user inputs something to exit to main menue.
