@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.ComponentModel;
 
 namespace SkalProj_Datastrukturer_Minne
@@ -147,6 +148,31 @@ namespace SkalProj_Datastrukturer_Minne
         /// </summary>
         static void ExamineQueue()
         {
+            var queue=new Queue<string>();
+            //propbabaly queue will be empty when created but just checking if it is empty or not?
+            if (queue.Count>0)
+            {
+                queue.Clear();
+            }
+            else
+            {
+                queue.Enqueue("Kalle");
+
+                queue.Enqueue("Greta");
+                queue.Dequeue();
+                queue.Enqueue("Stina");
+                queue.Dequeue();
+            }
+            static void Print(Queue queue)
+            {
+                foreach (string item in queue)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            
+            
+
             /*
              * Loop this method untill the user inputs something to exit to main menue.
              * Create a switch with cases to enqueue items or dequeue items
