@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace SkalProj_Datastrukturer_Minne
@@ -163,32 +164,45 @@ namespace SkalProj_Datastrukturer_Minne
                 queue.Enqueue("Stina");
                 queue.Dequeue();
             }
+            bool continueAdding = true;
+            while (continueAdding = true)
+            {
 
-            Console.WriteLine("to add someone to the que 1 to delete 2");
+            Console.WriteLine("to add someone to the que 1 to delete 2 exit 3");
             string input = Console.ReadLine();
+
             switch (input)
             {
                 case "1":
-                    Console.WriteLine("Who is next?Enter name");
+                    Console.WriteLine("Who is next? Enter name");
                     string newLiner= Console.ReadLine();
                     queue.Enqueue(newLiner);
+                    Console.WriteLine("UPDATED LIST");
                     foreach (string item in queue)
                     {
                         Console.WriteLine(item);
                     }
                     break;
                 case "2":
-                    Console.WriteLine("Who is next?Enter name");
-                    string outLiner = Console.ReadLine();
-                    queue.Dequeue();
+                    //Console.WriteLine("Who is leaving? Enter name");
+                    //string outLiner = Console.ReadLine();
+                    var personLeavning = queue.Dequeue();
+                    
+                        
                     foreach (string item in queue)
                     {
                         Console.WriteLine(item);
                     }
                     break;
+                        case "3":
+                        Console.WriteLine("3 to finalize");
+                        continueAdding = false;
+                        break;
 
             }
-            
+
+            };
+
 
 
 
@@ -212,6 +226,72 @@ namespace SkalProj_Datastrukturer_Minne
         /// </summary>
         static void ExamineStack()
         {
+
+            Stack<string> stack1 = new Stack<string>();
+            
+            foreach (var item in stack1)
+                Console.Write($":: {item} ::");
+            
+            //propbabaly queue will be empty when created but just checking if it is empty or not?
+            if (stack1.Count > 0)
+            {
+                stack1.Clear();
+            }
+            else
+            {
+                stack1.Push("Kalle");
+
+                stack1.Push("Greta");
+                stack1.Pop();
+                stack1.Push("Stina");
+                stack1.Pop();
+            }
+            bool continueAdding = true;
+            while (continueAdding = true)
+            {
+
+                Console.WriteLine("to add someone to the que 1 to delete 2 exit 3");
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        Console.WriteLine("Who is next? Enter name");
+                        string newLiner = Console.ReadLine();
+                        stack1.Push(newLiner);
+                        Console.WriteLine("UPDATED LIST");
+                        foreach (string item in stack1)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case "2":
+                        //Console.WriteLine("Who is leaving? Enter name");
+                        //string outLiner = Console.ReadLine();
+                        var personLeavning = stack1.Pop();
+
+
+                        foreach (string item in stack1)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case "3":
+                        Console.WriteLine("3 to finalize");
+                        continueAdding = false;
+                        break;
+
+                }
+
+            };
+
+            //while (true)
+            //{
+            //    switch (switch_on)
+            //    {
+            //        default:
+            //    }
+            //}
             /*
              * Loop this method until the user inputs something to exit to main menue.
              * Create a switch with cases to push or pop items
