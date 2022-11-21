@@ -164,8 +164,8 @@ namespace SkalProj_Datastrukturer_Minne
                 queue.Enqueue("Stina");
                 queue.Dequeue();
             }
-            bool continueAdding = true;
-            while (continueAdding = true)
+            bool continueAdding = false;
+            while (continueAdding)
             {
 
             Console.WriteLine("to add someone to the que 1 to delete 2 exit 3");
@@ -195,8 +195,8 @@ namespace SkalProj_Datastrukturer_Minne
                     }
                     break;
                         case "3":
-                        Console.WriteLine("3 to finalize");
-                        continueAdding = false;
+                        Console.WriteLine("finalizing the list");
+                        continueAdding = true;
                         break;
 
             }
@@ -247,7 +247,7 @@ namespace SkalProj_Datastrukturer_Minne
                 stack1.Pop();
             }
             bool continueAdding = true;
-            while (continueAdding = true)
+            while (continueAdding)
             {
 
                 Console.WriteLine("to add someone to the que 1 to delete 2 exit 3");
